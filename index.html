@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Evaluating mathematical reasoning of foundation models in visual contexts">
+  <meta name="keywords" content="MathVista, Math Vista">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CrossLink</title>
+
+  <link rel="icon" href="./static/images/icon.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
+  <script src="./static/js/question_card.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="static/images/icon.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista" style="vertical-align: middle">CrossLink</span>
+            </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            Enhancing Cross-domain Link Prediction via <br>Evolution Process Modeling
+          </h2>
+          <div class="is-size-5 publication-authors">
+
+           <span class="author-block">
+            <a href="None">Xuanwen Huang</a><sup style="color:#ffac33;">1</sup>*</sup>,</span>
+           <span class="author-block">
+             <a href="None">Wei Chow</a><sup style="color:#ffac33;">1</sup>*</sup>,</span>
+           <span class="author-block">
+             <a href="None">Yize Zhu</a><sup style="color:#ffac33;">1</sup>,</span>
+           <span class="author-block">
+             <a href="None">Yang Wang</a><sup style="color:#ac33ff">2</sup>,</span> 
+           <span class="author-block">
+            <a href="None">Ziwei Chai</a><sup style="color:#ffac33;">1</sup></span><br>
+          <span class="author-block">
+            <a href="None">Chunping Wang</a><sup style="color:#ac33ff">2</sup>,</span>
+          <span class="author-block">
+            <a href="None">Lei Chen</a><sup style="color:#ac33ff">2</sup>,</span>
+          <span class="author-block">
+            <a href="None">Yang Yang</a><sup style="color:#ffac33;">1</sup>,</span>
+          </div>
+         <div class="is-size-5 publication-authors">
+           <span class="author-block"><sup style="color:#ffac33">1</sup>Zhejiang University, </span>
+           <span class="author-block"><sup style="color:#ac33ff">2</sup>Finvolution</span><br>
+           <span class="author-block"><sup>*</sup>Equal Contribution</span><br>
+           <div class="is-size-3 publication-authors"><span class="paper-block"><b style="color:#f41c1c">WWW 2025</b> </span></div>
+        </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2402.02168"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/zjunet/CrossLink"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="TODO"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Checkpoint</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/WeiChow/DyGraphs"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🤗</p>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="margin-bottom: 1vh;">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Introduction</h2>
+          <div class="content has-text-justified">
+            <p>
+              This paper proposes <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+              <span class="mathvista">CrossLink</span>, a novel framework for cross-domain link prediction.<img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">CrossLink</span> learns the evolution pattern of a specific downstream graph and subsequently makes pattern-specific link predictions.
+            </p>
+            <p>
+              It employs a technique called <i>conditioned link generation</i>, which integrates both evolution and structure modeling to perform evolution-specific link prediction. This conditioned link generation is carried out by a transformer-decoder architecture, enabling efficient parallel training and inference.
+            </p>
+            <p>
+            <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">CrossLink</span> is trained on extensive dynamic graphs across diverse domains, encompassing 6 million dynamic edges. Extensive experiments on eight untrained graphs demonstrate that<img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">CrossLink</span> achieves state-of-the-art performance in cross-domain link prediction.
+            </p>
+            <p>
+              Compared to advanced baselines under the same settings,<img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">CrossLink</span> shows an average improvement of <b>11.40%</b> in <i>Average Precision</i> across eight graphs. Impressively, it surpasses the fully supervised performance of 8 advanced baselines on 6 untrained graphs.
+            </p>
+          </div>  
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  </div>
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="column is-full-width has-text-centered"> -->
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Background</h2>
+        <div class="content has-text-justified">
+          <p>
+            Dynamic Link are real-world widespread. Although them have different semantics, but all can be modeled as a link prediction task
+          </p>
+          <div class="content has-text-centered">
+            <img src="static/images/teaser.png" alt="algebraic reasoning" width="90%"/>
+            <p>Examples of dynamic link in real-world.</p>
+          </div>
+          <p>
+            Link prediction (LP) is a crucial task in dynamic graph modeling. owever, current methods mainly consider single graph setting. In this setting, the graph model is trained using supervised learning on a given graph and then makes inferences on the same graph (<i>End2End setting</i>).
+          </p>
+          <p>
+            This approach has several notable limitations when applied in real-world scenarios:
+          </p>
+          <p>
+            (1) High human/time costs: The <i>End2End setting</i> requires independently training different models for each graph. Each training process demands careful design and optimization of hyperparameters by experts. Additionally, the training process is time-consuming.
+          </p>
+          <p>
+            (2) Unsuitability for small datasets: The <i>End-to-End</i> setting typically requires a substantial number of samples for satisfactory domain-specific performance. This makes it ill-suited for small-scale application scenarios, such as B2B businesses or situations involving large graphs with limited data.
+          </p>
+          <p>
+            (3) Inability to learn more knowledge from different applications: Graphs in different applications may contain complementary knowledge. For instance, users purchasing items and users listening to music are both projections of human behavior. Therefore, learning from both user-item graphs and user-music graphs can help the model better understand behavior-related knowledge. However, End2End training is limited to a single graph.
+          </p>
+          <p>
+            Hence, we propose <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">CrossLink</span>, the first framework for cross-domain link prediction.<img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">CrossLink</span> learns the evolution pattern of a specific downstream graph and subsequently makes pattern-specific link predictions.
+          </p>   
+        </div>
+      
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            However, cross-domain link prediction faces a fundamental challenge: how to model ambiguous structures. Different graphs are interdependent, meaning the same structure may hold different meanings and evolve differently across various graphs.
+          </p>
+          <p>
+            As shown in Figure, Graph A typically follows a <i>triadic closure process</i>, where two nodes with common neighbors are more likely to form edges, while Graph B exhibits a contrasting pattern. Consequently, even if the node pair (red and blue nodes) in Graph A and Graph B has the same local structure, their ground truths are different. We refer to this type of local structure, which has diverse ground truths across various graphs, as ambiguous structure.
+          </p>
+          <p>
+            Current methods usually consider single graph settings, focusing on predicting future edges between two nodes solely based on their local structure.
+          </p>
+
+          <div class="content has-text-centered">
+            <img src="static/images/case.png" alt="arithmetic reasoning" width="95%"/><br>
+            (a) shows a case of structure conflict. Graph A follow a triadic closure process, while Graph B exhibits a contrasting process. (b) shows current methods cannot address this conflict. and (c) shows how prediction via modeling evolution, and it can address structure conflict.
+          </div>
+          
+          <p>
+            Therefore, these methods struggle to effectively model ambiguous structures under cross-domain setting. This limitation not only impedes the model's ability to accurately learn the meaning of ambiguous structures in multiple graphs but also hinders its capability to infer future edges correctly in target graphs, especially when the graphs contain many ambiguous structures.
+          </p>
+          <p>
+            To address these challenges,<img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">CrossLink</span> adopts the following approach:
+          </p>
+          
+          <div class="content has-text-centered">
+            <img src="static/images/model.png" alt="data-overview" style="max-width: 90%;"/>
+            <p>
+              Framework of <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">CrossLink</span>. (a) Models the graph's evolution process via a sequence of link prediction tasks with ground truths; (b) Evolution-specific link prediction based on both nodes' representations and the evolution process.
+              <br/>
+            </p>
+          </div>
+          <p>The<img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">CrossLink</span> process follows these key steps:</p>
+          <ul>
+            <li>Choose one ego-graph from a random domain for analysis and processing</li>
+            <li>Sort all links based on their temporal appearance in the graph</li>
+            <li>Generate embeddings for each graph structure</li>
+            <li>Process the embeddings through a Transformer architecture for analysis</li>
+            <li>Generate label predictions through parallel computation</li>
+            <li>Calculate and optimize loss functions in parallel</li>
+          </ul>
+
+        <center><h2 class="title is-3">Results</h2></center>
+        <p><b>Design Advantages:</b></p>
+        <ul>
+          <li>Enhanced efficiency in processing and prediction</li>
+          <li>Improved generalization through in-context learning, adapting NLP concepts to cross-domain modeling</li>
+        </ul>
+
+        <p><b>Key Insights:</b></p>
+        <ul>
+          <li>Link prediction demonstrates consistency across various domains, making it a universally applicable task</li>
+          <li>DyExpert achieves significant improvements in cross-domain link prediction performance</li>
+          <li>The model surpasses fully supervised performance metrics across six distinct datasets</li>
+        </ul>
+        <div class="content has-text-centered">
+          <img src="static/images/result1.png" alt="data-overview" style="max-width: 80%;"/>
+          <p>
+            Performance of various methods regarding cross-domain link prediction. We report their <i>Average Precision</i> <br/>(average of 3 runs and omit by %) across eight graphs.
+          </p>
+          <br>
+        </div>
+
+        <ul>
+          <li>Multi-domain training enhances model generalization, with CLG effectively modeling differences between domains</li>
+          <li>Extended evolution periods on target datasets improve prediction accuracy, highlighting the value of historical data</li>
+        </ul>
+        <div class="content has-text-centered">
+          <img src="static/images/results2.png" alt="data-overview" style="max-width: 80%;"/>
+          <p>
+            Analysis result of <img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
+            <span class="mathvista">CrossLink</span> regarding multi-domain training. (a) shows the result of ablation studies, where ``w/o'' removes a certain component of our model. (b) shows the performance of<img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">CrossLink</span> adopts different maximum sequence lengths (both training and inference). (c) indicates the performance on evaluated graphs that model solely trained by a specific graph.<br/>
+          </p>
+          <br>
+        </div>
+
+        <ul>
+          <li>Optimal hidden size varies according to training dataset size, requiring dynamic adjustment</li>
+          <li>DyExpert shows scaling potential similar to prompt tuning in GPT, where performance improves with increased prompts and cases</li>
+        </ul>
+        <div class="content has-text-centered">
+          <img src="static/images/results3.png" alt="data-overview" style="max-width: 80%;"/>
+          <p>
+            Performance of<img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">CrossLink</span> with diverse settings. (a) show the performance of the model improves with more training samples. (b) shows the performance of<img src="static/images/icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="mathvista">CrossLink</span> is influenced by the number of training graphs. (c) shows the best-hidden size of the model under 6M training samples. (d) further shows the best-hidden size under different training samples
+            .<br/>
+          </p>
+        </div> 
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- RESULTS SECTION -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@article{huang2024one,
+  title={One Graph Model for Cross-domain Dynamic Link Prediction},
+  author={Huang, Xuanwen and Chow, Wei and Wang, Yang and Chai, Ziwei and Wang, Chunping and Chen, Lei and Yang, Yang},
+  journal={arXiv preprint arXiv:2402.02168},
+  year={2024}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+<p style="font-size: 14px;">
+  This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://physbench.github.io/">PhysBench</a>, licensed under a <a rel="license"
+                                              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+  Commons Attribution-ShareAlike 4.0 International License</a>.
+</p>
+        </div>
+      </div>
+    </div>
+</footer>
+
+</body>
+</html>
