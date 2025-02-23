@@ -3,14 +3,13 @@
 <div align="center">
 <a href="https://arxiv.org/pdf/2402.02168.pdf"><img src="https://img.shields.io/badge/arXiv-2402.02168-b31b1b.svg" alt="arXiv"></a>
 <a href="https://github.com/zjunet/CrossLink"><img src="https://img.shields.io/github/stars/zjunet/CrossLink?style=social&amp;logo=github" width="75pt"></a>
-<a href="https://weichow23.github.io/CrossLink/"><img src="https://img.shields.io/badge/website-gold" alt="project website"></a>
-<a href="https://huggingface.co/MeissonFlow/Meissonic">
+<a href="https://zjunet.github.io/CrossLink/"><img src="https://img.shields.io/badge/website-gold" alt="project website"></a>
+<a href="https://huggingface.co/TODO">
     <img src="https://img.shields.io/badge/🤗-Model-blue.svg"></a>
 <a href="https://huggingface.co/datasets/WeiChow/DyGraphs">
     <img src="https://img.shields.io/badge/🤗-Dataset-green.svg"></a><br><br>
     <span style="color:red; font-size:27px;"><strong>WWW 2025</strong></span>
 </div>
-
 
 
 ## 🚀 Introduction
