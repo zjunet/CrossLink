@@ -56,6 +56,8 @@ You can also use our processed data in [huggingface](https://huggingface.co/data
 - [ ]  Release evaluation code and checkpoint
 - [ ]  Release training code
 
+for the code, please concat xwhuang@zju.edu.cn
+
 ## 💞 Acknowledgment
 
 Our code is built refer to [DyGLib](https://github.com/yule-BUAA/DyGLib)
